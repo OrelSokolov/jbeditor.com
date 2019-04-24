@@ -1,0 +1,62 @@
+{
+  "content": [
+    {
+      "type": "content",
+      "font_number": "1",
+      "font_size": "30",
+      "font_color": "black",
+      "content": "Hello world",
+      "background_color": "yellow"
+    },
+    {
+      "type": "special",
+      "content": " "
+    }
+  ],
+  "pages": [
+    {
+      "number": 1,
+      "class": 1,
+      "images_attached": []
+    },
+    {
+      "number": 2,
+      "class": 1,
+      "images_attached": []
+    }
+  ],
+  "page_classes": [
+    {
+      "name": "default",
+      "number": 1,
+      "background_color": "white",
+      "height": "297",
+      "width": "210",
+      "padding_array": [20, 20, 20, 20],
+      "orientation": "portrait"
+    }
+  ],
+  "table_classes": [],
+  "fonts": [{
+    "number": 1,
+    "name": "Arial",
+    "embedded": true,
+    "source": false
+  }],
+  "images": [
+    {
+      "data": "",
+      "description": ""
+    }
+  ],
+  "metadata": {
+    "author": {
+      "name": "Oleg Orlov",
+      "email": "orelcokolov@gmail.com",
+      "signature": false
+    },
+    "created_at": "",
+    "updated_at": "",
+    "license": ""
+  }
+}
