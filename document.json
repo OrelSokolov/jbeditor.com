@@ -10,7 +10,11 @@
     },
     {
       "type": "special",
-      "content": " "
+      "content": "tab"
+    },
+    {
+      "type": "special",
+      "content": "pagebreak"
     }
   ],
   "pages": [

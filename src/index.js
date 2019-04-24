@@ -1,3 +1,5 @@
+import {Canvas} from './canvas';
+
 /*
 
 72.272pt     25,4
@@ -7,7 +9,7 @@
  */
 
 
-var canvas_scale = 4;
+var canvas_scale = Canvas.scale;
 var dpi = 72.272*canvas_scale;
 console.log("Current dpi is ", dpi)
 
@@ -30,11 +32,13 @@ function renderPages(doc){
         document.getElementById("canvas-container").appendChild(canvas);
 
         canvas.setAttribute("id", `page-${page.number}`);
+        canvas.setAttribute("tabindex", `${page.number}`);
         canvas.setAttribute("width", style.width*canvas_scale);
         canvas.setAttribute("height", style.height*canvas_scale);
 
-        css_width = parseInt(window.getComputedStyle(canvas).width)
-        console.log(pt2cpx(30))
+        var css_width = parseInt(window.getComputedStyle(canvas).width);
+
+        canvas.addEventListener("keydown", function(e){  }, true);
     }
 }
 
@@ -131,21 +135,6 @@ function getDocument(callback){
 }
 
 /*
-
- */
-function cursorStartPositionNoText(page_class){
-
-}
-
-function cursortStartPositionWithText(){
-
-}
-
-/*
-Returns cursor (x, y, size)
- */
-function nextCursorPositionAndSize(page){
-}
 
 /*
 Load DOM and render

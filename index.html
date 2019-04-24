@@ -6,14 +6,66 @@
 
 <body>
 
-<div class="instruments">
+<div class="navigation">
+    <h1>Table of content</h1>
 
 </div>
-<div> Hello world</div>
+
 <div id="canvas-container">
 
 </div>
 
-<script src="editor.js"></script>
+<div class="instruments" data-object="window.doc">
+    <div class="parameters-content">
+        <div data-element="current_element">
+            <h2>Add</h2>
+            <input type="text" data-element-property="" placeholder="type">
+            <input type="text" data-element-property="" placeholder="content">
+        </div>
+        <div>
+            <h2>Remove</h2>
+            <button>Backspace</button>
+            <button>Delete</button>
+        </div>
+
+    </div>
+
+    <div class="parameters-page">
+        <h2>Page</h2>
+    </div>
+
+    <div class="parameters-fonts-array">
+        <h2>Fonts</h2>
+    </div>
+
+    <div class="parameters-page-class">
+        <h2>Page class</h2>
+    </div>
+
+    <div class="parameters-image">
+        <h2>Image</h2>
+    </div>
+
+    <div class="parameters-metadata">
+        <h2>Metadata</h2>
+        <h3>Author</h3>
+        <div>
+            <label>Name</label>
+            <input type="text" data-property="metadata.author.name">
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="text" data-property="metadata.author.email">
+        </div>
+    </div>
+
+    <div class="parameters-document">
+
+    </div>
+
+
+</div>
+
+<script src="dist/main.js"></script>
 </body>
 </html>
