@@ -1,13 +1,38 @@
-:root {
-    --darkcolor: gray;
-}
+@import "css/scrollbar.css";
+@import "css/variables.css";
+@import "css/placeholder.css";
 
 body {
     font-family: Arial;
-    color: white;
-    background: #fffaf5;
+    color: lightgrey;
+    background: var(--bodybackground);
     padding: 0;
     margin: 0;
+}
+
+button {
+    padding: 5px 30px;
+    border: solid thin var(--lightgray);
+    background: var(--darkcolor);
+    color: var(--buttontext);
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    color: var(--orange);
+    background: var(--lightblack);
+}
+
+button:first-child {
+    border-radius: 20px 0 0 20px;
+}
+
+button:last-child {
+    border-radius: 0 20px 20px 0;
 }
 
 h1 {
@@ -23,18 +48,26 @@ h1, h2 {
 }
 
 [class^="parameters-"] {
-    border-style: solid;
-    border-color: white;
-    border-width: thin;
+    margin-top: 20px;
 }
 
 input {
+    outline-color: var(--orange);
     width: 100%;
     display: block;
+    background: var(--lightblack);
+    color: white;
+    border: solid thin black;
+    margin-bottom: 5px;
+    height: 30px;
+    padding: 2px 5px;
+    box-sizing: border-box;
 }
 
 .navigation, .instruments {
-    padding: 10px;
+    overflow: scroll;
+    padding-left: 20px;
+    padding-right: 5px;
     position: fixed;
     top: 0;
     height: 100vh;
@@ -51,6 +84,20 @@ input {
     background: var(--darkcolor);
 }
 
+.instrument-title {
+    /*background: var(--gray);*/
+
+    padding: 10px 0;
+}
+
+.instrument-body {
+    background: var(--gray);
+    padding: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 14px;
+}
+
 canvas {
     background: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -62,3 +109,7 @@ canvas {
     height: 700px;
 }
 
+
+.button-list {
+    display: flex;
+}
